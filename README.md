@@ -30,29 +30,30 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, unique: true, index|
-|email|varthar|null: false, unique: true|
+|name|string|null: false, unique: true, index: true|
 
 ### Association
 - has_many :comments
-- has_many groups, through: :members
+- has_many :groups, through: :members
+- has_many :members
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|integer|null: false|
+|name|integer|null: false|
 
 ### Association
 - has_many :users, through: :members
 - has_many :comments
+- has_many :members
 
 ## membersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -62,10 +63,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|varthar||
-|img|varthar||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|comment|text||
+|img|string||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
