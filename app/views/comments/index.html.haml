@@ -1,31 +1,30 @@
-%body
-  %div.side
-    %div.side__name
-      = @name[:name]
-      %a{href: "リンク1"}
-        %i.fa.fa-cog
-      %a{href: "リンク2"}
-        %i.fa.fa-edit
-    %div.side__comment
-      %p.name test
-      %p.comment comment
+.side
+  .side__name
+    = @name[:name]
+    = link_to do
+      %i.fa.fa-cog
+    = link_to do
+      %i.fa.fa-edit
+  .side__comment
+    %p.name test
+    %p.comment comment
 
-  %div.contents
-    %div.contents__group
-      %div.contents__group-left
-        %h4 group
-        %p member
-      %a{href: "link3"}Edit
-    %div.contents__comment
-      %p.name
-        name
-      %p.day daytime
-      %p.comment
-        comment
-    %div.contents__form
-      %form{action: "/index", method: "post"}
-        %input.form-message{type: "text" ,placeholder: "type a message"}
-        %label.upload-label{for: "upload-icon"}
-          %i.fa.fa-picture-o
-          %input.upload-image{type: "file", id: "upload-icon"}
-        %input.form-send{type: "submit", value: "Send"}
+.contents
+  .contents__group
+    .contents__group-left
+      %h4 group
+      %p member
+    = link_to "edit"
+  .contents__comment
+    %p.name
+      name
+    %p.day daytime
+    %p.comment
+      comment
+  .contents__form
+    %form{action: "/index", method: "post"}
+      %input.form-message{type: "text" ,placeholder: "type a message"}
+      %label.upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o
+        %input.upload-image{type: "file", id: "upload-icon"}
+      %input.form-send{type: "submit", value: "Send"}

@@ -1,135 +1,133 @@
-body {
+.side {
+  width: 300px;
   height: 100vh;
-  .side {
-    width: 300px;
-    height: 100%;
-    float: left;
-    &__name {
-      background-color: #253141;
-      height: 100px;
-      padding: 0 20px;
-      line-height: 100px;
+  float: left;
+  &__name {
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+    color: $white-color;
+    font-size: 16px;
+    font-weight: bold;
+    a {
+      float: right;
+      margin-left: 5px;
       color: $white-color;
-      font-size: 16px;
-      font-weight: bold;
-      a {
-        float: right;
-        margin-left: 5px;
-        color: $white-color;
-      }
-    }
-    &__comment {
-      background-color: #2f3e51;
-      height: calc(100% - 100px);
-      overflow: scroll;
-      padding: 0 20px;
-      color: $white-color;
-      font-weight: bold;
-      .name {
-        padding-top: 20px;
-        font-size: 15px;
-      }
-      .comment {
-        font-size: 11px;
-        padding: 5px 0 20px 0;
-      }
     }
   }
-  .contents {
-    width: calc(100% - 300px);
-    float:left;
-    height: 100%;
-    &__group {
-      border-bottom: 1px solid #eeeeee;
-      height: 99px;
-      padding:0 40px;
-      &-left {
-        float: left;
-        h4 {
-          font-size: 20px;
-          color: #333333;
-          padding-top: 35px;
-        }
-        p {
-          font-size: 12px;
-          color: #999999;
-          padding-top: 15px;
-        }
+  &__comment {
+    background-color: #2f3e51;
+    height: calc(100% - 100px);
+    overflow: scroll;
+    padding: 0 20px;
+    color: $white-color;
+    font-weight: bold;
+    .name {
+      padding-top: 20px;
+      font-size: 15px;
+    }
+    .comment {
+      font-size: 11px;
+      padding: 5px 0 20px 0;
+    }
+  }
+}
+.contents {
+  width: calc(100% - 300px);
+  float:left;
+  height: 100vh;
+  &__group {
+    border-bottom: 1px solid #eeeeee;
+    height: 99px;
+    padding:0 40px;
+    &-left {
+      float: left;
+      h4 {
+        font-size: 20px;
+        color: #333333;
+        padding-top: 35px;
       }
-      a {
-        float: right;
-        text-decoration: none;
-        border: 1px solid $btn-color;
-        color: $btn-color;
-        margin-top:28px;
-        padding:0 20px 0 20px;
-        height: 40px;
-        line-height: 40px;
+      p {
+        font-size: 12px;
+        color: #999999;
+        padding-top: 15px;
+      }
+    }
+    a {
+      float: right;
+      text-decoration: none;
+      border: 1px solid $btn-color;
+      color: $btn-color;
+      margin-top:28px;
+      padding:0 20px 0 20px;
+      height: 40px;
+      line-height: 40px;
 
-      }
     }
-    &__comment {
-      background-color: #fafafa;
-      overflow: scroll;
-      height: calc(100% - 236px);
-      padding: 0 40px;
-      font-weight: bold;
-      color: #434a54;
-      padding-top:46px;
-      .name {
-        font-size: 16px;
+  }
+  &__comment {
+    background-color: #fafafa;
+    overflow: scroll;
+    height: calc(100% - 236px);
+    padding: 0 40px;
+    font-weight: bold;
+    color: #434a54;
+    padding-top:46px;
+    .name {
+      font-size: 16px;
+      float: left;
+    }
+    .day {
         float: left;
-      }
-      .day {
-          float: left;
-          font-size: 12px;
-          color: #999999;
-          font-weight: normal;
-          padding: 4px 0 0 10px;
-      }
-      .comment {
-        font-size: 14px;
-        clear: both;
-        padding: 10px 0 40px 0;
-      }
+        font-size: 12px;
+        color: #999999;
+        font-weight: normal;
+        padding: 4px 0 0 10px;
     }
-    &__form {
-      height: 90px;
-      background-color: silver;
-      padding: 0 40px;
-      form {
-        width: 100%;
-        position: relative;
-        padding-top: 20px;
-        .form-message {
-          border-style: none;
-          font-size: 16px;
-          color: #434a54;
-          padding: 0 10px;
-          height: 50px;
-          width: calc(100% - 135px);
+    .comment {
+      font-size: 14px;
+      clear: both;
+      padding: 10px 0 40px 0;
+    }
+  }
+  &__form {
+    height: 90px;
+    background-color: silver;
+    padding: 0 40px;
+    form {
+      width: 100%;
+      position: relative;
+      padding-top: 20px;
+      .form-message {
+        border-style: none;
+        font-size: 16px;
+        color: #434a54;
+        padding: 0 10px;
+        height: 50px;
+        width: calc(100% - 135px);
+      }
+      .upload-label {
+        position: absolute;
+        cursor: pointer;
+        right:125px;
+        bottom:10px;
+        font-size: 1.3rem;
+        .upload-image {
+          display: none;
         }
-        .upload-label {
-          position: absolute;
-          cursor: pointer;
-          right:125px;
-          bottom:10px;
-          font-size: 1.3rem;
-          .upload-image {
-            display: none;
-          }
-          }
-        .form-send {
-          border-style: none;
-          cursor: pointer;
-          float: right;
-          background-color: $btn-color;
-          padding: 13px;
-          width: 100px;
-          border-radius: 0%;
-          color: $white-color;
         }
+      .form-send {
+        border-style: none;
+        cursor: pointer;
+        float: right;
+        background-color: $btn-color;
+        padding: 13px;
+        width: 100px;
+        border-radius: 0%;
+        color: $white-color;
       }
     }
   }
 }
+
