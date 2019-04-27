@@ -4,7 +4,7 @@ body {
     width: 300px;
     height: 100%;
     float: left;
-    .side__name {
+    &__name {
       background-color: #253141;
       height: 100px;
       padding: 0 20px;
@@ -18,7 +18,7 @@ body {
         color: $white-color;
       }
     }
-    .side__comment {
+    &__comment {
       background-color: #2f3e51;
       height: calc(100% - 100px);
       overflow: scroll;
@@ -39,11 +39,11 @@ body {
     width: calc(100% - 300px);
     float:left;
     height: 100%;
-    .contents__group {
+    &__group {
       border-bottom: 1px solid #eeeeee;
       height: 99px;
       padding:0 40px;
-      .group-left {
+      &-left {
         float: left;
         h4 {
           font-size: 20px;
@@ -68,7 +68,7 @@ body {
 
       }
     }
-    .contents__comment {
+    &__comment {
       background-color: #fafafa;
       overflow: scroll;
       height: calc(100% - 236px);
@@ -93,7 +93,7 @@ body {
         padding: 10px 0 40px 0;
       }
     }
-    .contents__form {
+    &__form {
       height: 90px;
       background-color: silver;
       padding: 0 40px;
