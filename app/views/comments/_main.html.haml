@@ -1,20 +1,10 @@
-.side
-  .side__name
-    = @name[:name]
-    = link_to do
-      %i.fa.fa-cog
-    = link_to do
-      %i.fa.fa-edit
-  .side__comment
-    %p.name test
-    %p.comment comment
 
 .contents
   .contents__group
     .contents__group-left
       %h4 group
       %p member
-    = link_to "edit"
+    = link_to "edit", "/groups/1/edit"
   .contents__comment
     %p.name
       name
