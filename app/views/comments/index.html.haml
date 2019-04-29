@@ -1,0 +1,20 @@
+.wrapper
+  = render "shared/side"
+
+.contents
+  .contents__group
+    .contents__group-left
+      %h4= @group.name
+      %li member :
+      - @group.members.each do |member|
+        %li= member.user.name
+    = link_to "edit"
+  .contents__comment
+    = render @comments
+  .contents__form
+    = form_for [@group, @comment] do |f|
+      = f.text_field :comment, class: "form-message", placeholder: "type a message"
+      = f.label :image, class: "upload-label" do
+        %i.fa.fa-picture-o
+        = f.file_field :image, class: "upload-image"
+      = f.submit "Send", class: "form-send"
