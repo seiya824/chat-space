@@ -5,4 +5,4 @@
 %p.comment
   = comment.comment
   %br
-  = image_tag comment.image, class: 'image' unless comment.image.blank?
+  = image_tag comment.image.url, class: 'image' if comment.image.present?
