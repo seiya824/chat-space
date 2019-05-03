@@ -36,6 +36,7 @@ $(function() {
       $('.contents__comment').append(html);
       //セレクタにhtmlを追加
       $("form")[0].reset();
+      //フォームをリセット
       $('.form-send').prop('disabled', false);
       // ボタンの解除
 
