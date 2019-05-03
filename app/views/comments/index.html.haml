@@ -12,7 +12,7 @@
   .contents__comment
     = render @comments
   .contents__form
-    = form_for [@group, @comment] do |f|
+    = form_for [@group, @comment], html: {id: "new_comment"} do |f|
       = f.text_field :comment, class: "form-message", placeholder: "type a message"
       = f.label :image, class: "upload-label" do
         %i.fa.fa-picture-o
