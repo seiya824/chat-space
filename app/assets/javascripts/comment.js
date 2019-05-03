@@ -35,17 +35,12 @@ $(function() {
       var html = buildHTML(data);
       $('.contents__comment').append(html);
       //セレクタにhtmlを追加
-      console.log(data)
-      $('.form-message').val('');
-      //inputの削除
-      $('upload-image').val('');
-      //画像の削除
+      $("form")[0].reset();
       $('.form-send').prop('disabled', false);
       // ボタンの解除
 
       $('.contents__comment').animate({scrollTop: $('.contents__comment')[0].scrollHeight}, 'swing');
       //$('要素名').animate({'動かすプロパティ' : '動かす縦横の幅'});
-      //
     })
     .fail(function() {
       alert('エラーが発生したためメッセージは送信できませんでした。');
