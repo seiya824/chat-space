@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   resources :groups ,only: [:new, :edit, :create, :update] do
     resources :comments, only: [:create, :index]
   end
-  get "/user" => "users#index"
-  # indexのルートがうまく行かないので追加
-  resource :user, only: [:edit, :update]
+
+  resources :users, only: [:edit, :update, :index]
 
 end
