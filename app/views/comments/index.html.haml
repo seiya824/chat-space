@@ -8,7 +8,7 @@
       %li member :
       - @group.members.each do |member|
         %li= member.user.name
-    = link_to "edit", "/groups/#{@group.id}/edit"
+    = link_to "edit", edit_group_path(@group.id)
   .contents__comment
     = render @comments
   .contents__form
