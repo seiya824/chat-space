@@ -1,8 +1,9 @@
-%p.name
-  = comment.user.name
-%p.day
-  = comment.created_at.strftime("%Y/%m/%d %H:%M")
-%p.comment
-  = comment.comment
-  %br
-  = image_tag comment.image.url, class: 'image' if comment.image.present?
+.contents__comment__data{data: {id: "#{comment.id}"}}
+  %p.name
+    = comment.user.name
+  %p.day
+    = comment.created_at.strftime("%Y/%m/%d %H:%M")
+  %p.comment
+    = comment.comment
+    %br
+    = image_tag comment.image.url, class: 'image' if comment.image.present?

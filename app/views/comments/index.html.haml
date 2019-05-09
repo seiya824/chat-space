@@ -9,7 +9,7 @@
       - @group.members.each do |member|
         %li= member.user.name
     = link_to "edit", edit_group_path(@group.id)
-  .contents__comment
+  .contents__comment{data: {group: {id: "#{@group.id}"}}}
     = render @comments
   .contents__form
     = form_for [@group, @comment], html: {id: "new_comment"} do |f|

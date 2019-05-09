@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   
   resources :groups ,only: [:new, :edit, :create, :update] do
     resources :comments, only: [:create, :index]
+    namespace :api do
+      resources :comments, only: :index, defaults: { format: 'json' }
+    end
   end
 
   resources :users, only: [:edit, :update, :index]
